@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="tableScreen">
+        <a routerLink=""><i class="fa fa-2x fa-bell"></i></a>
+        <div class="tableList">
+            <div class="activeTables" *ngFor="let table of tables" >
+                <div class="table" *ngIf="(table.active == true)">
+                    <h5>{{table.tableName}}</h5>
+                    <a routerLink="/camera"><button class="btn btn-primary btn-sm px-4" >Cobrar</button></a>
+                </div>
+            </div>
+
+            <hr class="my-4">
+            <div class="paymentSuccess" *ngFor="let table of tables">
+                <div class="table" *ngIf="(table.paymentStatus == true)">
+                    <h5>{{table.tableName}}</h5>
+                    <button class="btn btn-success btn-sm px-4" (click)="moveToInactive(table.tableNo)" ><i class="fa fa-check" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <hr class="my-4">
+
+            <div class="inactiveTables" *ngFor="let table of tables">
+                <div class="table" *ngIf="(table.active == false && table.paymentStatus == false )">
+                    <h5>{{table.tableName}}</h5>
+                    <button class="btn btn-sm px-4"  (click)="changeStatus(table.tableNo)">Activar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+/* Star Stlying  */
+input.star-5[_ngcontent-ddj-c52]:checked ~ label.star[_ngcontent-ddj-c52]:before{
+    text-shadow: 1px 1px #c60!important;
+}
+::ng-deep label.star{
+    color: #ddd!important;
+}
+::ng-deep label.star::before{
+    content: "\f005"!important;
+}
+::ng-deep label.star:before{
+    text-shadow: 1px 1px #d5d5d500 !important;
+}
