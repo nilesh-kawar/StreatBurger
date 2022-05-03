@@ -32,6 +32,21 @@ p{
     border: none;
 }
 
+.mainImg,.billingScreen,.successScreen{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.billingDetails{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: fit-content;
+    padding: 0 2rem;
+}
+
 /* Image Div Styling Start  */
 .mainImg{
     margin: auto;
@@ -265,16 +280,68 @@ footer span{
 
 
 /* Media Query  */
-@media screen and (min-width: 600px){
+@media screen and (max-width: 1025px) and (min-width: 700px) {
+    .mainImg img{
+        height: 48rem;
+    }
+    .menuDiv img{
+        height: 62rem;
+    }
+    .billingScreen .bill {
+        max-height: 50vh;
+    }
+    .successScreen h3 {
+        font-size: calc(2.3rem + .6vw);
+    }
+    .successScreen p {
+        font-size: 31px;
+    }
+    .successScreen .form-control{
+        font-size: 2rem;
+    }
+    .successScreen .star{
+        display: inline-block;
+        font-size: 60px!important;
+    }
+    .billingDetails .bill {
+        max-height: 80vh;
+    }
+}
+@media screen and (max-width: 1025px) and (min-width: 800px) {
+    .mainImg img{
+        height: 55rem;
+    }
+    .menuDiv img{
+        height: 64rem;
+    }
+    .billingDetails{
+        padding: 0;
+    }
+}
+@media screen and (min-width: 1025px) {
     .mainImg img{
         height: 25rem;
     }
-    .menuDiv img{
-        height: 30rem;
+    .menuDiv {
+        max-width: 400px;
     }
 }
 @media screen and (max-width: 375px){
     .mainImg img{
         height: 25rem;
+    }
+}
+@media screen and (max-width: 330px){
+    .mainImg img{
+        height: 20rem;
+    }
+    .billingScreen .bill{
+        max-height: 24vh;
+    }
+    .successScreen p {
+        margin-top: 0.3rem!important;
+    }
+    .billingDetails .bill {
+        max-height: 45vh;
     }
 }

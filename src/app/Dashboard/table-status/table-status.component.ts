@@ -57,6 +57,24 @@ export class TableStatusComponent implements OnInit {
         tableName: 'Mesa #12',
         active: false,
         paymentStatus: true
+      },
+      {
+        tableNo: 12,
+        tableName: 'Mesa #12',
+        active: false,
+        paymentStatus: true
+      },
+      {
+        tableNo: 12,
+        tableName: 'Mesa #12',
+        active: false,
+        paymentStatus: true
+      },
+      {
+        tableNo: 12,
+        tableName: 'Mesa #12',
+        active: false,
+        paymentStatus: true
       }
     ]
   }
